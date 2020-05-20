@@ -4,8 +4,8 @@ public class Book extends LibraryItem {
     private String author;
 
     public Book(String title, long yearReleased, long id, double costLostDamaged, String returnDate, double lateFee,
-            boolean checkedOut, long numOfPages, String author) {
-        super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, checkedOut);
+            boolean checkedOut, long numOfPages, String author, String genre) {
+        super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, checkedOut, genre);
     }
 
     // Getters

@@ -8,10 +8,11 @@ public class LibraryItem {
     private String returnDate;
     private double lateFee;
     private boolean checkedOut;
+    private String genre;
 
     // Constructor
     public LibraryItem(String title, long yearReleased, long id, double costLostDamaged, String returnDate,
-            double lateFee, boolean checkedOut) {
+            double lateFee, boolean checkedOut, String genre) {
 
         this.title = title;
         this.yearReleased = yearReleased;
@@ -20,6 +21,7 @@ public class LibraryItem {
         this.returnDate = returnDate;
         this.lateFee = lateFee;
         this.checkedOut = checkedOut;
+        this.genre = genre;
     }
 
     // Getters
@@ -49,6 +51,10 @@ public class LibraryItem {
 
     public boolean getCheckedOut() {
         return checkedOut;
+    }
+
+    public String getGenre() {
+        return genre;
     }
 
     // Setters
@@ -82,6 +88,10 @@ public class LibraryItem {
 
     public boolean isCheckedOut(boolean checkedOut) {
         return getCheckedOut();
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
     @Override
