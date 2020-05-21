@@ -7,18 +7,18 @@ public class LibraryItem {
     private double costLostDamaged;
     private String returnDate;
     private double lateFee;
-    private boolean checkedOut;
+    private boolean isCheckedOut;
     private String genre;
 
     // Constructor
     public LibraryItem() {
         this.costLostDamaged = 50;
         this.lateFee = 10;
-        this.checkedOut = false;
+        this.isCheckedOut = false;
     }
 
     public LibraryItem(String title, long yearReleased, long id, double costLostDamaged, String returnDate,
-            double lateFee, boolean checkedOut, String genre) {
+            double lateFee, boolean isCheckedOut, String genre) {
 
         this.title = title;
         this.yearReleased = yearReleased;
@@ -26,7 +26,7 @@ public class LibraryItem {
         this.costLostDamaged = costLostDamaged;
         this.returnDate = returnDate;
         this.lateFee = lateFee;
-        this.checkedOut = checkedOut;
+        this.isCheckedOut = isCheckedOut;
         this.genre = genre;
     }
 
@@ -55,8 +55,8 @@ public class LibraryItem {
         return lateFee;
     }
 
-    public boolean getCheckedOut() {
-        return checkedOut;
+    public boolean getIsCheckedOut() {
+        return isCheckedOut;
     }
 
     public String getGenre() {
@@ -88,8 +88,8 @@ public class LibraryItem {
         this.lateFee = lateFee;
     }
 
-    public void setCheckedOut(boolean checkedOut) {
-        this.checkedOut = checkedOut;
+    public void setIsCheckedOut(boolean isCheckedOut) {
+        this.isCheckedOut = isCheckedOut;
     }
 
     public void setGenre(String genre) {
@@ -98,7 +98,7 @@ public class LibraryItem {
 
     // Methods
     public boolean isCheckedOut() {
-        return getCheckedOut();
+        return getIsCheckedOut();
     }
 
     @Override

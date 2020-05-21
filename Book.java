@@ -4,9 +4,13 @@ public class Book extends LibraryItem {
     private Author author;
     private LateChargeType lateCharge;
 
+    public Book() {
+
+    }
+
     public Book(String title, long yearReleased, long id, double costLostDamaged, String returnDate, double lateFee,
-            boolean checkedOut, long numOfPages, Author author, String genre, LateChargeType lateCharge) {
-        super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, checkedOut, genre);
+            boolean isCheckedOut, long numOfPages, Author author, String genre, LateChargeType lateCharge) {
+        super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, isCheckedOut, genre);
         this.numOfPages = numOfPages;
         this.author = author;
         this.lateCharge = lateCharge;
@@ -43,7 +47,7 @@ public class Book extends LibraryItem {
     // Methods
     @Override
     public boolean isCheckedOut() {
-        if (getCheckedOut()) {
+        if (getIsCheckedOut()) {
             return true;
         } else {
             return false;
@@ -53,6 +57,6 @@ public class Book extends LibraryItem {
     @Override
     public String toString() {
         return "Identification number: " + String.valueOf(this.getId()) + " \n Title: " + this.getTitle() + " \n Year: "
-                + String.valueOf(this.getYearReleased());
+                + String.valueOf(this.getYearReleased()) + " \n Checked Out: " + isCheckedOut();
     }
 }

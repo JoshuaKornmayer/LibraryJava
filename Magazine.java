@@ -1,15 +1,19 @@
 public class Magazine extends Periodical implements Reservable, Loanable {
 
+    public Magazine() {
+
+    }
+
     public Magazine(String title, long yearReleased, long id, double costLostDamaged, String returnDate, double lateFee,
-            boolean checkedOut, String issueDate, String newIssue, String genre, PublishingCompany publisher) {
-        super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, checkedOut, issueDate, newIssue, genre,
+            boolean isCheckedOut, String issueDate, String newIssue, String genre, PublishingCompany publisher) {
+        super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, isCheckedOut, issueDate, newIssue, genre,
                 publisher);
 
     }
 
     @Override
     public boolean isCheckedOut() {
-        if (getCheckedOut()) {
+        if (getIsCheckedOut()) {
             return true;
         } else {
             return false;

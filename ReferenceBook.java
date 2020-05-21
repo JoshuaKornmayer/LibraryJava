@@ -1,16 +1,20 @@
 public class ReferenceBook extends Book implements Reservable, Loanable {
 
+    public ReferenceBook() {
+
+    }
+
     public ReferenceBook(String title, long yearReleased, long id, double costLostDamaged, String returnDate,
-            double lateFee, boolean checkedOut, long numOfPages, Author author, String genre,
+            double lateFee, boolean isCheckedOut, long numOfPages, Author author, String genre,
             LateChargeType lateCharge) {
-        super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, checkedOut, numOfPages, author, genre,
+        super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, isCheckedOut, numOfPages, author, genre,
                 lateCharge);
     }
 
     // Methods
     @Override
     public boolean isCheckedOut() {
-        if (getCheckedOut()) {
+        if (getIsCheckedOut()) {
             return true;
         } else {
             return false;
@@ -37,6 +41,6 @@ public class ReferenceBook extends Book implements Reservable, Loanable {
     @Override
     public String toString() {
         return "Identification number: " + String.valueOf(this.getId()) + " \n Title: " + this.getTitle() + " \n Year: "
-                + String.valueOf(this.getYearReleased());
+                + String.valueOf(this.getYearReleased()) + " \n Checked Out: " + isCheckedOut();
     }
 }

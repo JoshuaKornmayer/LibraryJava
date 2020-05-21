@@ -1,16 +1,20 @@
 public class Newspaper extends Periodical implements Reservable, Loanable {
 
+    public Newspaper() {
+
+    }
+
     public Newspaper(String title, long yearReleased, long id, double costLostDamaged, String returnDate,
-            double lateFee, boolean checkedOut, String genre, String issueDate, String newIssue,
+            double lateFee, boolean isCheckedOut, String genre, String issueDate, String newIssue,
             PublishingCompany publisher) {
-        super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, checkedOut, genre, issueDate, newIssue,
+        super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, isCheckedOut, genre, issueDate, newIssue,
                 publisher);
 
     }
 
     @Override
     public boolean isCheckedOut() {
-        if (getCheckedOut()) {
+        if (getIsCheckedOut()) {
             return true;
         } else {
             return false;
