@@ -1,14 +1,20 @@
+import java.util.List;
+
 public class CardHolder {
     private String name;
     private String gender;
     private int age;
     private long id;
+    private List<Book> books;
+    private List<Periodical> periodicals;
 
-    public CardHolder(String name, String gender, int age, long id) {
+    public CardHolder(String name, String gender, int age, long id, List<Book> books, List<Periodical> periodicals) {
         this.name = name;
         this.gender = gender;
         this.age = age;
         this.id = id;
+        this.books = books;
+        this.periodicals = periodicals;
     }
 
     // Getters
@@ -26,6 +32,14 @@ public class CardHolder {
 
     public long getId() {
         return this.id;
+    }
+
+    public List<Book> getBooks() {
+        return this.books;
+    }
+
+    public List<Periodical> getPeriodicals() {
+        return this.periodicals;
     }
 
     // Setters

@@ -2,12 +2,15 @@ public class Periodical extends LibraryItem {
 
     private String issueDate;
     private String newIssue;
+    private PublishingCompany publisher;
 
     public Periodical(String title, long yearReleased, long id, double costLostDamaged, String returnDate,
-            double lateFee, boolean checkedOut, String genre, String issueDate, String newIssue) {
+            double lateFee, boolean checkedOut, String genre, String issueDate, String newIssue,
+            PublishingCompany publisher) {
         super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, checkedOut, genre);
         this.issueDate = issueDate;
         this.newIssue = newIssue;
+        this.publisher = publisher;
     }
 
     // Getters
@@ -20,6 +23,10 @@ public class Periodical extends LibraryItem {
         return newIssue;
     }
 
+    public PublishingCompany getPublishingCompany(){
+        return this.publisher;
+    }
+
     // Setters
 
     public void setIssueDate(String issueDate) {
@@ -30,6 +37,9 @@ public class Periodical extends LibraryItem {
         this.newIssue = newIssue;
     }
 
+    public void setPublishingCompany(PublishingCompany publisher){
+        this.publisher = publisher;
+    }
     // Methods
     @Override
     public boolean isCheckedOut() {

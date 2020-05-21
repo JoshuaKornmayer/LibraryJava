@@ -1,7 +1,7 @@
 public class GeneralBook extends Book implements Reservable, Loanable {
 
     public GeneralBook(String title, long yearReleased, long id, double costLostDamaged, String returnDate,
-            double lateFee, boolean checkedOut, long numOfPages, String author, String genre) {
+            double lateFee, boolean checkedOut, long numOfPages, Author author, String genre) {
         super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, checkedOut, numOfPages, author, genre);
     }
 

@@ -1,11 +1,10 @@
-public class Newspaper extends Periodical {
-
-    private String publisher;
+public class Newspaper extends Periodical implements Reservable, Loanable {
 
     public Newspaper(String title, long yearReleased, long id, double costLostDamaged, String returnDate,
-            double lateFee, boolean checkedOut, String genre, String issueDate, String newIssue, String publisher) {
-        super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, checkedOut, genre, issueDate, newIssue);
-        this.publisher = publisher;
+            double lateFee, boolean checkedOut, String genre, String issueDate, String newIssue,
+            PublishingCompany publisher) {
+        super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, checkedOut, genre, issueDate, newIssue,
+                publisher);
 
     }
 
@@ -16,6 +15,18 @@ public class Newspaper extends Periodical {
         } else {
             return false;
         }
+    }
+
+    // Implementing methods from IReserveable
+    @Override
+    public boolean isReservable() {
+        return false;
+    }
+
+    // Implementing methods from ILoanable
+    @Override
+    public boolean isLoanable() {
+        return false;
     }
 
     public String toString() {

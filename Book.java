@@ -1,10 +1,10 @@
 public class Book extends LibraryItem {
 
     private long numOfPages;
-    private String author;
+    private Author author;
 
     public Book(String title, long yearReleased, long id, double costLostDamaged, String returnDate, double lateFee,
-            boolean checkedOut, long numOfPages, String author, String genre) {
+            boolean checkedOut, long numOfPages, Author author, String genre) {
         super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, checkedOut, genre);
         this.numOfPages = numOfPages;
         this.author = author;
@@ -16,7 +16,7 @@ public class Book extends LibraryItem {
         return numOfPages;
     }
 
-    public String getAuthor() {
+    public Author getAuthor() {
         return author;
     }
 
@@ -26,7 +26,7 @@ public class Book extends LibraryItem {
         this.numOfPages = numOfPages;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(Author author) {
         this.author = author;
     }
 
