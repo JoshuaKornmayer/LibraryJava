@@ -1,0 +1,3 @@
+interface Loanable {
+    boolean isLoanable();
+}

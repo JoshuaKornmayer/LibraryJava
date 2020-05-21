@@ -1,0 +1,3 @@
+interface Reservable {
+    boolean isReservable();
+}

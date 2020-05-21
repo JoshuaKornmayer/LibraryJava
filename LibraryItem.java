@@ -92,12 +92,13 @@ public class LibraryItem {
         this.checkedOut = checkedOut;
     }
 
-    public boolean isCheckedOut(boolean checkedOut) {
-        return getCheckedOut();
-    }
-
     public void setGenre(String genre) {
         this.genre = genre;
+    }
+
+    // Methods
+    public boolean isCheckedOut(boolean checkedOut) {
+        return getCheckedOut();
     }
 
     @Override
