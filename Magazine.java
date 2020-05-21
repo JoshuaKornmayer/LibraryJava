@@ -28,6 +28,11 @@ public class Magazine extends Periodical implements Reservable, Loanable {
         return false;
     }
 
+    @Override
+    public double lateCharge() {
+        return 0;
+    }
+
     public String toString() {
         return "Identification number: " + String.valueOf(this.getId()) + " \n Title: " + this.getTitle() + " \n Year: "
                 + String.valueOf(this.getYearReleased());

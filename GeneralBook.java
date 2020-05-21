@@ -1,8 +1,10 @@
 public class GeneralBook extends Book implements Reservable, Loanable {
 
     public GeneralBook(String title, long yearReleased, long id, double costLostDamaged, String returnDate,
-            double lateFee, boolean checkedOut, long numOfPages, Author author, String genre) {
-        super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, checkedOut, numOfPages, author, genre);
+            double lateFee, boolean checkedOut, long numOfPages, Author author, String genre,
+            LateChargeType lateCharge) {
+        super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, checkedOut, numOfPages, author, genre,
+                lateCharge);
     }
 
     // Methods
@@ -29,6 +31,11 @@ public class GeneralBook extends Book implements Reservable, Loanable {
         } else {
             return true;
         }
+    }
+
+    @Override
+    public double lateCharge() {
+        return 50;
     }
 
     @Override

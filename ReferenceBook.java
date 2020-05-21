@@ -1,8 +1,10 @@
 public class ReferenceBook extends Book implements Reservable, Loanable {
 
     public ReferenceBook(String title, long yearReleased, long id, double costLostDamaged, String returnDate,
-            double lateFee, boolean checkedOut, long numOfPages, Author author, String genre) {
-        super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, checkedOut, numOfPages, author, genre);
+            double lateFee, boolean checkedOut, long numOfPages, Author author, String genre,
+            LateChargeType lateCharge) {
+        super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, checkedOut, numOfPages, author, genre,
+                lateCharge);
     }
 
     // Methods
@@ -25,6 +27,11 @@ public class ReferenceBook extends Book implements Reservable, Loanable {
     @Override
     public boolean isLoanable() {
         return false;
+    }
+
+    @Override
+    public double lateCharge() {
+        return 0;
     }
 
     @Override
