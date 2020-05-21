@@ -32,8 +32,8 @@ public class Book extends LibraryItem {
 
     // Methods
     @Override
-    public boolean isCheckedOut(boolean checkedOut) {
-        if (checkedOut) {
+    public boolean isCheckedOut() {
+        if (getCheckedOut()) {
             return true;
         } else {
             return false;

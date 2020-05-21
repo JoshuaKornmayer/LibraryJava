@@ -1,4 +1,4 @@
-public class ReferenceBook extends Book {
+public class ReferenceBook extends Book implements Reservable, Loanable {
 
     public ReferenceBook(String title, long yearReleased, long id, double costLostDamaged, String returnDate,
             double lateFee, boolean checkedOut, long numOfPages, String author, String genre) {
@@ -7,12 +7,24 @@ public class ReferenceBook extends Book {
 
     // Methods
     @Override
-    public boolean isCheckedOut(boolean checkedOut) {
-        if (checkedOut) {
+    public boolean isCheckedOut() {
+        if (getCheckedOut()) {
             return true;
         } else {
             return false;
         }
+    }
+
+    // Implementing methods from IReserveable
+    @Override
+    public boolean isReservable() {
+        return false;
+    }
+
+    // Implementing methods from ILoanable
+    @Override
+    public boolean isLoanable() {
+        return false;
     }
 
     @Override

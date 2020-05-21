@@ -6,8 +6,9 @@ public class Magazine extends Periodical {
 
     }
 
-    public boolean isCheckedOut(boolean checkedOut) {
-        if (checkedOut) {
+    @Override
+    public boolean isCheckedOut() {
+        if (getCheckedOut()) {
             return true;
         } else {
             return false;

@@ -97,7 +97,7 @@ public class LibraryItem {
     }
 
     // Methods
-    public boolean isCheckedOut(boolean checkedOut) {
+    public boolean isCheckedOut() {
         return getCheckedOut();
     }
 
