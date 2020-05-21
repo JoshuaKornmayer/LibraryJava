@@ -31,6 +31,7 @@ public class Periodical extends LibraryItem {
     }
 
     // Methods
+    @Override
     public boolean isCheckedOut(boolean checkedOut) {
         if (checkedOut) {
             return true;

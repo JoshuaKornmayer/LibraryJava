@@ -6,6 +6,8 @@ public class Book extends LibraryItem {
     public Book(String title, long yearReleased, long id, double costLostDamaged, String returnDate, double lateFee,
             boolean checkedOut, long numOfPages, String author, String genre) {
         super(title, yearReleased, id, costLostDamaged, returnDate, lateFee, checkedOut, genre);
+        this.numOfPages = numOfPages;
+        this.author = author;
     }
 
     // Getters
@@ -29,6 +31,7 @@ public class Book extends LibraryItem {
     }
 
     // Methods
+    @Override
     public boolean isCheckedOut(boolean checkedOut) {
         if (checkedOut) {
             return true;

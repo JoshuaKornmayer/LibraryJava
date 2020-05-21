@@ -11,6 +11,12 @@ public class LibraryItem {
     private String genre;
 
     // Constructor
+    public LibraryItem() {
+        this.costLostDamaged = 50;
+        this.lateFee = 10;
+        this.checkedOut = false;
+    }
+
     public LibraryItem(String title, long yearReleased, long id, double costLostDamaged, String returnDate,
             double lateFee, boolean checkedOut, String genre) {
 

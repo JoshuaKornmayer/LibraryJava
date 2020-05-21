@@ -44,4 +44,13 @@ public class CardHolder {
     public void setId(long id) {
         this.id = id;
     }
+
+    // methods
+    public void checkOutItem() {
+
+    }
+
+    public void reserveItem() {
+
+    }
 }
